@@ -80,7 +80,10 @@
             var MUSIC = $scope.music;
             var MORE = $scope.more;
             var NATIONALITY =$scope.nationality;
-            
+            var checkmail =(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+            if(!EMAIL.match(checkmail)){
+                alert("Nhập Email phải đúng định dạng");
+            }
             if((MSSV != "" && HOTEN != "" && EMAIL != "") && (GENDER == "1" || GENDER=="0") && (BOOK != "" || TRAVEL != "" || FOOD != "" || MUSIC != "" || MORE != "") && (NATIONALITY != "")){
                 alert("Nhập thông tin đúng");
                 frm.reset();
