@@ -96,7 +96,7 @@ h1 {
 
 .banner {
     position: relative;
-    min-height: 300px;
+    height: 300px;
     width: 100%;
     text-align: center;
     background-color: rgb(81, 79, 69);
