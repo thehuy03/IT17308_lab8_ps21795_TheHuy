@@ -28,3 +28,13 @@ form .container{
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.btn_container{
+    margin-left: 22%;
+}
+.btn_container button{
+    width: 100px;
+    background-color: burlywood;
+}
+.btn_container button:disabled{
+    background-color: dimgrey;
+}

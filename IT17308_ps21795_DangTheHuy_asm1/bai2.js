@@ -28,12 +28,11 @@ function choice(button){
         anh = document.getElementById("anh");
         anh.src =image[index].src;
     }else if(button == x.children[2]){
-        
         index++;
         console.log(index);
-        if(index >= image.length-1){
-            index = 0;
-        }
+        // if(index >= image.length-1){
+        //     index = 0;
+        // }
         if(index == image.length-1){
             document.getElementById("nex").disabled=true;
         }
@@ -48,5 +47,4 @@ function choice(button){
         anh =document.getElementById("anh");
         anh.src = image[index].src;
     }
-  
 }
