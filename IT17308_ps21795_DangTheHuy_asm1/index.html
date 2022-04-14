@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình tính phương trình</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="theh3">
+            <h3>GIẢI PHƯƠNG TRÌNH : <div id="a1"></div><div id="b1"></div><div id="c1"></div>=0    </h3>
+        </div> 
+        <div class="slg">Số lần đã giải : <span id="slg"></span></div>
+        <div class="line"></div>
+        <div class="input">
+            <span>Nhập số a: <input  type="text" id="a"></span>
+        </div>
+        <div class="input">
+            <span>Nhập số b: <input type="text" id="b"></span>
+        </div>
+        <div class="input">
+            <span>Nhập số c: <input type="text" id="c"></span>
+        </div>
+        <button  class="choice" disabled id="giai" type="button" onclick="giaipt(); refesh();" >Giải PT</button>
+        <button class="choice" id="choso" onclick="RD();" type="button">Cho số</button>
+        <div class="mini-container">
+            <div id="kq"></div>
+        </div>
+        <div class="end">Bây giờ là : <span id="time"></span></div>
+    </div>
+    <script>
+        var lap = setInterval("thoigian()",1000);
+        var a = document.getElementById("a1").innerHTML="ax<sup>2</sup>";
+        var b = document.getElementById("b1").innerHTML="+bx";
+        var c = document.getElementById("c1").innerHTML="+c";
+    </script>
+</body>
+</html>

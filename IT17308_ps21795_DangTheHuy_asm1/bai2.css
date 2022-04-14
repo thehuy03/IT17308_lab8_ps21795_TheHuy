@@ -1,0 +1,30 @@
+body{
+    /* background-repeat:no-repeat ; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right top, #661328, #620f33, #59103e, #4d1549, #3d1b51, #32265c, #212f65, #00386b, #004671, #00505f, #00573c, #14590e);
+}
+form img {
+    margin: 50px auto;
+    object-fit: cover;
+    width: 800px;
+    background-size: cover;
+    height: 500px;
+}
+form .container{
+    width: 800px;
+    margin: auto;
+    height: fit-content;
+}
+.name{
+    color: forestgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 700px;
+    /* text-align: center; */
+    margin-left: 33%;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

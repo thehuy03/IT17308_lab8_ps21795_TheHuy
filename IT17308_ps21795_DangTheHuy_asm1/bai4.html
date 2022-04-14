@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai4-asm</title>
+    <link rel="stylesheet" href="bai4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"> </script>
+</head>
+<body ng-app="myapp">
+    <form ng-controller="frm" name="frm" ng-submit="dangki()" novalidate>
+        <h2>ĐĂNG KÍ THÀNH VIÊN</h2>
+        <div class="lane1">
+            <div class="">Mã sinh viên</div>
+            <div class="ip"><input type="text" required name="msv" ng-model="msv"></div>
+            <em ng-if="frm.msv.$invalid">Vui lòng không để trống</em>
+        </div>
+        <div class="lane1">
+            <div class="">Họ và tên</div>
+            <div class="ip"><input required type="text" name="hoten" ng-model="hoten"></div>
+            <em ng-if="frm.hoten.$invalid">Vui lòng không để trống</em> 
+        </div>
+        <div class="lane1">
+            <div class="">Email</div>
+            <div class="ip"><input required type="text" name="email" ng-model="email" ></div>
+            <em ng-if="frm.email.$invalid">Vui lòng không để trống</em>
+        </div>
+        <div class="lane1">
+            <div class="">Giới tính</div>
+            <div class="gender">
+                <input type="radio" name="gender" ng-model="gender" value="1">Nam</input>
+                <input type="radio" name="gender" ng-model="gender" value="0">Nữ</input>
+            </div>
+            <em ng-if="!gender">Vui lòng không để trống</em>
+        </div>
+        <div class="lane1">
+            <div class="">Sở thích</div>
+            <div>
+                <input ng-model="book" type="checkbox">Đọc sách</input> 
+                <input ng-model="travel" type="checkbox">Du lịch</input> 
+                <input ng-model="food" type="checkbox">Ẩm thực</input> 
+                <input ng-model="music" type="checkbox">Âm nhạc</input> 
+                <input ng-model="more" type="checkbox">Khác</input> 
+            </div>
+            <em ng-if="!book && !travel && !food && !music && !more">Vui lòng chọn ít nhất 1</em>
+        </div>
+        <div class="lane1">
+            <div class="">Quốc tịch</div>
+            <div>
+                <select name="nationality" ng-model="nationality">
+                    <option value="">Chọn quốc tịch</option>
+                    <option value="VietNam">Việt Nam</option>
+                    <option value="My">Mỹ</option>
+                </select>
+                <em ng-if="!nationality">Vui lòng không để trống</em>
+            </div>
+        </div>
+        <div class="lane1">
+            <div class="">Ghi chú</div>
+            <div>
+                <textarea name="" id="" cols="45" rows="5"></textarea>
+            </div>
+        </div>
+        <button>Đăng kí</button>
+    </form>
+</body>
+<script>
+    var app = angular.module("myapp",[]);
+    app.controller("frm",kiemtra);
+    function kiemtra($scope){
+        $scope.dangki = function(){
+            var MSSV = $scope.msv;
+            var HOTEN =$scope.hoten;
+            var EMAIL = $scope.email;
+            var GENDER = $scope.gender;
+            var BOOK = $scope.book;
+            var TRAVEL = $scope.travel;
+            var FOOD = $scope.food;   
+            var MUSIC = $scope.music;
+            var MORE = $scope.more;
+            var NATIONALITY =$scope.nationality;
+            
+            if((MSSV != "" && HOTEN != "" && EMAIL != "") && (GENDER == "1" || GENDER=="0") && (BOOK != "" || TRAVEL != "" || FOOD != "" || MUSIC != "" || MORE != "") && (NATIONALITY != "")){
+                alert("Nhập thông tin đúng");
+                frm.reset();
+            }else{
+                alert("Không để trống!");
+            }
+        }
+    }
+</script>
+</html>

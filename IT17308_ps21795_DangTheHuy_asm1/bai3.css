@@ -1,0 +1,26 @@
+table{
+    text-align: center;
+    background-color:#5ad6ec91;
+    border: #25554b;
+    margin: auto;
+}
+tr:nth-last-child(2n){
+    background-color: #597c9dd2;
+
+}
+.lane1{
+    width: 190px; 
+}
+.line1{
+    font-weight: bold;   
+}
+.line2{
+    width: 130px;
+}
+#lastcol{
+    background-color: #57FBDA;
+}
+#lastcol span{
+    font-size: larger;
+    font-weight: bold;
+}

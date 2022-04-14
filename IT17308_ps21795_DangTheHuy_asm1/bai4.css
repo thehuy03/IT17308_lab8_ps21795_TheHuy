@@ -1,0 +1,56 @@
+body{
+    background-color: #B1A6C9;
+}
+form{
+    background-color: darkgray;
+    width: 500px;
+    border-radius: 5px;
+    border: 5px solid #2fbbd46b;
+    height: 730px;
+    box-shadow: 0 0 10px #2fbbd46b;
+    margin: auto;
+}
+h2{
+    text-align: center;
+}
+.lane1{
+    padding-top: 10px;
+    margin:10px auto ;
+    width: 80%;
+}
+.lane1 input{
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+.ip input{
+    width: 90%;
+    height: 25px;
+    background-color: whitesmoke;
+}
+.gender{
+    width: 90%;
+    border: 1px solid black;
+    height: 25px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+button{
+    width: 90px;
+    height: 30px;
+    border-radius: 15px ;
+    margin-left: 40%;
+    background-color: rgb(68, 68, 235) ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+    font-size: medium;
+    box-shadow: 0 0 5px rgb(68, 68, 235);
+}
+select{
+    width: 90%;
+    height: 30px;
+}
+textarea{
+    resize: none;
+    min-height: fit-content;
+}

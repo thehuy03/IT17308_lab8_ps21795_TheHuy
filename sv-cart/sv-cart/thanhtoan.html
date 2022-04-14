@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body onload="tinhlaidon(this);" ng-app="myApp">
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+        <div class="row mb menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+        </div>
+        <form name="frm" ng-controller="ctrl" novalidate ng-submit="dangki()">
+        <div class="row mb " >
+            <div class="row">
+                <h1>THÔNG TIN NHẬN HÀNG</h1>
+                <table class="thongtinnhanhang" >
+                    <tr>
+                        <td width="20%">Họ tên</td>
+                        <td class="name"><input type="text" name="hoten" required ng-model="hoten"/><em ng-show="frm.hoten.$invalid">Vui lòng không để trống ô</em></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ</td>
+                        <td class="name"><input type="text" name="diachi" required ng-model="diachi"><em ng-show="frm.diachi.$invalid">Vui lòng nhập địa chỉ vào</em></td> 
+                        
+                    </tr>
+                    <tr>
+                        <td>Điện thoại</td>
+                        <td class="name"><input type="number" name="dienthoai" required ng-model="dienthoai"><em ng-if="frm.dienthoai.$invalid">Vui lòng nhập sđt</em></td> 
+                        
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td class="name"><input type="text" name="email" required ng-model="email"><em ng-if="frm.email.$invalid">Vui lòng nhập Email</em></td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="row mb">
+                <h1>GIỎ HÀNG</h1>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền ($)</th>
+                    </tr>
+                    <tbody id="mycart">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row mb">
+                <button class="dongy">ĐỒNG Ý ĐẶT HÀNG</button>
+            </div>
+        </div>
+    </form>
+        <script src="js/cart(2).js"></script>
+        <script>laydon();</script>
+
+        <script>
+            var slide=document.getElementById("mycart");
+            slide = null;
+            var app = angular.module("myApp",[]);
+            app.controller("ctrl",xuly);
+            function xuly($scope){
+                var name = $scope.hoten;
+                var address = $scope.diachi;
+                var phonenumber = $scope.dienthoai;
+                var mail = $scope.email;
+                $scope.dangki=function(){
+                    if((name != "" && address != "" && phonenumber != "" && mail != "")&& (laydon() != "")){
+                        alert("Đặt đơn thành công");
+                        sessionStorage.clear();
+                        location.reload();
+                    }else{
+                        alert("Bạn chưa nhập thông tin đặt hàng!");
+                    }
+                }
+            }
+        </script>
+</body>
+
+</html>
