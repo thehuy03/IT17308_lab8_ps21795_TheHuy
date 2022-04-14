@@ -54,3 +54,6 @@ textarea{
     resize: none;
     min-height: fit-content;
 }
+em{
+    color: red;
+}
