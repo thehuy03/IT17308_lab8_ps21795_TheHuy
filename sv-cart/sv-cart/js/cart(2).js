@@ -160,7 +160,7 @@ var index = 0;
 var sl = 10;
 for(var i=0 ; i<sl ; i++){
     image[i] = new Image();
-    image[i].src = "images/"+i+".jpg";
+    image[i].src = "sv-cart/sv-cart/images/"+i+".jpg";
 }
 function choice(button){
     var x = button.parentElement;
